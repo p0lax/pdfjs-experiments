@@ -23,6 +23,7 @@ import { DEFAULT_PDF_URL, DEFAULT_SEARCH_STRING } from './constants';
   onClickHandler = (data) => {
     this.pdfViewer;
     this.pdfFindController;
+    
   }
 
   render() {
