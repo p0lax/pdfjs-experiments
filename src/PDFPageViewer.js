@@ -23,7 +23,6 @@ class PDFPageViewer extends Component {
   }
 
   onClickHandler = () => {
-    this.pdfPageView.currentScaleValue = 2.0;
     this.pdfPageView.update(2.0);
   }
 
