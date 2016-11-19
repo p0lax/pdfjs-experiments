@@ -7,14 +7,19 @@ class PDFPageViewer extends Component {
   componentDidMount() {
     const container = this.refs.container;
     PDFJS.getDocument(DEFAULT_PDF_URL).then((pdfDocument) => {
+      // pdfDocument.getData().then((data) => {
+      //   debugger
+      // });
       return pdfDocument.getPage(PAGE_TO_VIEW).then((pdfPage) => {
         const pdfPageView = new PDFJS.PDFPageView({
-        container: container,
-        id: PAGE_TO_VIEW,
-        scale: SCALE,
-        defaultViewport: pdfPage.getViewport(SCALE)
-      });
-
+          container: container,
+          id: PAGE_TO_VIEW,
+          scale: SCALE,
+          defaultViewport: pdfPage.getViewport(SCALE)
+        });
+        // pdfPage.getTextContent().then((data) => {
+        //   debugger
+        // });
         pdfPageView.setPdfPage(pdfPage);
         this.pdfPageView = pdfPageView;
         return pdfPageView.draw();
