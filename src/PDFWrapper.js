@@ -34,7 +34,8 @@ import { DEFAULT_PDF_URL, DEFAULT_SEARCH_STRING } from './constants';
   render() {
     
     return (
-      <div ref="container" onClick={this.onClickHandler}>
+      <div ref="container">
+        
         <div id="viewer" className="pdfViewer"></div>
       </div>
     )

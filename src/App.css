@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -22,3 +27,36 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.textLayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0.2;
+  line-height: 1.0;
+}
+
+.textLayer div {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.container {
+  position: absolute;
+  outline: 1px solid #000;
+}
+
+.hightlight {
+  background-color: rgba(56, 210, 0255, 0.2)
+} 
+
+::selection { background: rgba(0,0,255,0.3); }
